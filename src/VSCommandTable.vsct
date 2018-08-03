@@ -6,11 +6,15 @@
   <Include href="KnownImageIds.vsct"/>
 
   <Commands package="guidMyPackage">
+    <Bitmaps>
+      <Bitmap guid="apiIcon" href="Resources\if_api_1931211.bmp" usedList="apiIcon1"/>
+    </Bitmaps>
+    
     <Buttons>
       <Button guid="guidMyPackageCmdSet" id="ShowToolWindowId" priority="0x0100" type="Button">
         <!-- parent is View > Other Windows -->
-        <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>
-        <Icon guid="ImageCatalogGuid" id="ImageIcon"/>
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_TOOLS_EXT_CUST"/>
+        <Icon guid="apiIcon" id="apiIcon1"/>
         <CommandFlag>IconIsMoniker</CommandFlag>
         <Strings>
           <ButtonText>Api Generator for MySQL Migrations</ButtonText>
@@ -20,6 +24,9 @@
   </Commands>
 
   <Symbols>
+    <GuidSymbol name="apiIcon" value="{7cfcd5b8-f13c-41c4-9b42-3c3ae7f4f7d8}">
+      <IDSymbol name="apiIcon1" value="1" />
+    </GuidSymbol>
     <GuidSymbol name="guidMyPackage" value="{6e3b2e95-902b-4385-a966-30c06ab3c7a6}" />
 
     <GuidSymbol name="guidMyPackageCmdSet" value="{9cc1062b-4c82-46d2-adcb-f5c17d55fb85}">

@@ -22,7 +22,7 @@ namespace ApiGenerator
         Orientation = ToolWindowOrientation.Left)]
     [Guid("6e3b2e95-902b-4385-a966-30c06ab3c7a6")]
     [ProvideMenuResource("Menus.ctmenu", 1)]
-    public sealed class MyPackage : AsyncPackage
+    public sealed class ApiGeneratorPackage : AsyncPackage
     {
         protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
