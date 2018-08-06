@@ -6,31 +6,52 @@
   <Include href="KnownImageIds.vsct"/>
 
   <Commands package="guidMyPackage">
-    <Bitmaps>
-      <Bitmap guid="apiIcon" href="Resources\if_api_1931211.bmp" usedList="apiIcon1"/>
-    </Bitmaps>
-    
+    <!--Buttons section. -->
+    <!--This section defines the elements the user can interact with, like a menu command or a button
+        or combo box in a toolbar. -->
     <Buttons>
+      <!--To define a menu group you have to specify its ID, the parent menu and its display priority.
+          The command is visible and enabled by default. If you need to change the visibility, status, etc, you can use
+          the CommandFlag node.
+          You can add more than one CommandFlag node e.g.:
+              <CommandFlag>DefaultInvisible</CommandFlag>
+              <CommandFlag>DynamicVisibility</CommandFlag>
+          If you do not want an image next to your command, remove the Icon node /> -->
       <Button guid="guidMyPackageCmdSet" id="ShowToolWindowId" priority="0x0100" type="Button">
         <!-- parent is View > Other Windows -->
         <Parent guid="guidSHLMainMenu" id="IDG_VS_TOOLS_EXT_CUST"/>
-        <Icon guid="apiIcon" id="apiIcon1"/>
+        <Icon guid="guidImages" id="bmpIco"/>
         <CommandFlag>IconIsMoniker</CommandFlag>
         <Strings>
           <ButtonText>Api Generator for MySQL Migrations</ButtonText>
         </Strings>
       </Button>
     </Buttons>
+
+    <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
+    <Bitmaps>
+      <!--  The bitmap id is defined in a way that is a little bit different from the others:
+            the declaration starts with a guid for the bitmap strip, then there is the resource id of the
+            bitmap strip containing the bitmaps and then there are the numeric ids of the elements used
+            inside a button definition. An important aspect of this declaration is that the element id
+            must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
+      <Bitmap guid="guidImages" href="Resources\Icon128x128.png" usedList="bmpIco"/>
+    </Bitmaps>
+
   </Commands>
 
   <Symbols>
-    <GuidSymbol name="apiIcon" value="{7cfcd5b8-f13c-41c4-9b42-3c3ae7f4f7d8}">
-      <IDSymbol name="apiIcon1" value="1" />
+    <GuidSymbol name="guidImages" value="{7cfcd5b8-f13c-41c4-9b42-3c3ae7f4f7d8}">
+      <IDSymbol name="bmpIco" value="1" />
     </GuidSymbol>
+
+    <!-- This is the package guid. -->
     <GuidSymbol name="guidMyPackage" value="{6e3b2e95-902b-4385-a966-30c06ab3c7a6}" />
 
+    <!-- This is the guid used to group the menu commands together -->
     <GuidSymbol name="guidMyPackageCmdSet" value="{9cc1062b-4c82-46d2-adcb-f5c17d55fb85}">
       <IDSymbol name="ShowToolWindowId" value="0x0100" />
     </GuidSymbol>
+
   </Symbols>
 </CommandTable>
