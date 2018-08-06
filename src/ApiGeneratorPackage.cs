@@ -15,7 +15,7 @@ namespace ApiGenerator
         "Wizard for create Model, Controller, and Persistence classes for use with the \"Empty Project for MySQL and Migrations\" project (https://github.com/rafaelpassarela/empty_project_mysql_migrations)", 
         "1.0")]
     [ProvideToolWindow(
-        typeof(SampleToolWindow), 
+        typeof(ApiConfigToolWindow), 
         Style = VsDockStyle.Tabbed, 
         DockedWidth = 300, 
         Window = "DocumentWell", 
@@ -32,12 +32,12 @@ namespace ApiGenerator
 
         public override IVsAsyncToolWindowFactory GetAsyncToolWindowFactory(Guid toolWindowType)
         {
-            return toolWindowType.Equals(Guid.Parse(SampleToolWindow.WindowGuidString)) ? this : null;
+            return toolWindowType.Equals(Guid.Parse(ApiConfigToolWindow.WindowGuidString)) ? this : null;
         }
 
         protected override string GetToolWindowTitle(Type toolWindowType, int id)
         {
-            return toolWindowType == typeof(SampleToolWindow) ? SampleToolWindow.Title : base.GetToolWindowTitle(toolWindowType, id);
+            return toolWindowType == typeof(ApiConfigToolWindow) ? ApiConfigToolWindow.Title : base.GetToolWindowTitle(toolWindowType, id);
         }
 
         protected override async Task<object> InitializeToolWindowAsync(Type toolWindowType, int id, CancellationToken cancellationToken)

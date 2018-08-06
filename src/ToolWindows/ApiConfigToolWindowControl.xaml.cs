@@ -4,11 +4,11 @@ using System.Windows.Controls;
 
 namespace ApiGenerator.ToolWindows
 {
-    public partial class SampleToolWindowControl : UserControl
+    public partial class ApiConfigToolWindowControl : UserControl
     {
         private ApiGeneratorState _state;
 
-        public SampleToolWindowControl(ApiGeneratorState state)
+        public ApiConfigToolWindowControl(ApiGeneratorState state)
         {
             _state = state;
 

@@ -22,7 +22,7 @@ namespace ApiGenerator
             package.JoinableTaskFactory.RunAsync(async () =>
             {
                 ToolWindowPane window = await package.ShowToolWindowAsync(
-                    typeof(SampleToolWindow),
+                    typeof(ApiConfigToolWindow),
                     0,
                     create: true,
                     cancellationToken: package.DisposalToken);

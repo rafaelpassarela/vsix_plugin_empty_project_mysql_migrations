@@ -58,15 +58,16 @@
     <Compile Include="ApiGeneratorPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Commands\ShowToolWindow.cs" />
-    <Compile Include="ToolWindows\SampleToolWindow.cs" />
-    <Compile Include="ToolWindows\SampleToolWindowControl.xaml.cs">
-      <DependentUpon>SampleToolWindowControl.xaml</DependentUpon>
+    <Compile Include="ToolWindows\ApiConfigToolWindow.cs" />
+    <Compile Include="ToolWindows\ApiConfigToolWindowControl.xaml.cs">
+      <DependentUpon>ApiConfigToolWindowControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ToolWindows\SampleToolWindowState.cs" />
+    <Compile Include="ToolWindows\ApiGeneratorState.cs" />
   </ItemGroup>
   <ItemGroup>
     <VSCTCompile Include="VSCommandTable.vsct">
       <ResourceName>Menus.ctmenu</ResourceName>
+      <SubType>Designer</SubType>
     </VSCTCompile>
     <None Include="packages.config" />
     <None Include="source.extension.vsixmanifest">
@@ -196,13 +197,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\ApiToolWindow.png" />
     <Content Include="Resources\Icon128x128.png">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Resources\if_api_1931211.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="ToolWindows\SampleToolWindowControl.xaml">
+    <Page Include="ToolWindows\ApiConfigToolWindowControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
