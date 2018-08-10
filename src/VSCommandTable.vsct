@@ -23,7 +23,7 @@
         <Icon guid="guidImages" id="bmpApiIco"/>
         <!--<CommandFlag>IconIsMoniker</CommandFlag>-->
         <Strings>
-          <ButtonText>Api Generator for MySQL Migrations</ButtonText>
+          <ButtonText>Api Generator for MySQL and Migrations</ButtonText>
         </Strings>
       </Button>
     </Buttons>
@@ -54,7 +54,7 @@
     <GuidSymbol name="guidMyPackage" value="{6e3b2e95-902b-4385-a966-30c06ab3c7a6}" />
 
     <!-- This is the guid used to group the menu commands together -->
-    <GuidSymbol name="guidMyPackageCmdSet" value="{9cc1062b-4c82-46d2-adcb-f5c17d55fb85}">
+    <GuidSymbol name="guidMyPackageCmdSet" value="{d7840576-a816-44ee-b5f4-58fd0593b1c1}">
       <IDSymbol name="ShowToolWindowId" value="0x0100" />
     </GuidSymbol>
 

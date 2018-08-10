@@ -6,7 +6,7 @@ using Task = System.Threading.Tasks.Task;
 
 namespace ApiGenerator
 {
-    internal sealed class ShowToolWindow
+    internal sealed class ShowApiToolWindow
     {
         public static async Task InitializeAsync(AsyncPackage package)
         {

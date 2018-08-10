@@ -27,7 +27,7 @@ namespace ApiGenerator
         protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
             await JoinableTaskFactory.SwitchToMainThreadAsync();
-            await ShowToolWindow.InitializeAsync(this);
+            await ShowApiToolWindow.InitializeAsync(this);
         }
 
         public override IVsAsyncToolWindowFactory GetAsyncToolWindowFactory(Guid toolWindowType)
